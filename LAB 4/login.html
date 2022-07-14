@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<table align="center" style="background-color: slategray; padding: 50px; border-radius: 10px;">
+		<tr>
+			<td>Username</td>
+			<td>:</td>
+			<td>
+				<input style="border-radius: 10px;" type="text" id="user" name="">
+			</td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td>:</td>
+			<td>
+				<input style="border-radius: 10px;" type="Password" id="pass" name="">
+			</td>
+			<td>
+				<input style="border-radius: 10px;" type="button"  value="show" id="show" name="" onclick="showpass()">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" align="center">
+				<button style="width: 100%; background-color: yellow; border-radius: 10px;" onclick="login()">Login</button>
+			</td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+		function showpass()
+		{
+			var p = document.getElementById("pass");
+			var c = document.getElementById("show");
+
+			if(p.type=="password")
+			{
+				p.type="text";
+				c.value="Hide";
+			}
+
+			else
+			{
+				p.type="password";
+				c.value="show";
+			}
+		}
+
+		function login()
+		{
+			var username = document.getElementById("user").value;
+			var password = document.getElementById("pass").value;
+
+			if(username=="Dipesh")
+			{
+				if(password=="2004")
+				{
+					document.write("Valid user");
+				}
+				else
+				{
+					document.write("Invalid password");
+				}
+			}
+
+			else
+			{
+				document.write("Invalid Username");
+			}
+		}
+	</script>
+</body>
+</html>

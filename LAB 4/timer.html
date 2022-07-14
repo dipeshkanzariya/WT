@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<input type="button" value="Start counter" name="" onclick="startcounter()">
+	<input type="button" value="Stop counter" name="" onclick="stopcounter()">
+	<input type="button" value="Reset" name="" onclick="reset()">
+
+	<h1>---Timer---</h1>
+	<h1 id="count">00.00</h1>
+
+	<script type="text/javascript">
+		var a=0;
+		var c;
+
+		function startcounter()
+		{
+			c=setInterval(print,10);
+		}
+		function reset()
+		{
+			stopcounter();
+			a=0;
+			var temp = document.getElementById("count");
+			temp.innerHTML="00.00";
+		}
+
+		function stopcounter()
+		{
+			clearInterval(c);
+		}
+
+		function print()
+		{
+			a++;
+			var temp=document.getElementById("count");
+			temp.innerHTML=a/100;
+		}
+
+		
+	</script>
+</body>
+</html>

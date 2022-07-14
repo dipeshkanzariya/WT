@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<input type="number" id="start" name="">
+	<br>
+	<button onclick="startcounter()">Start Counter</button>
+
+	<script type="text/javascript">
+		var a=0;
+		var c;
+		function starts()
+		{
+			temp=document.getElementById("start");
+			temp.value=a;
+			a--;
+			if(0>a)
+			{
+				clearInterval(c);
+				document.write("<img src='giphy.gif'>");
+			}
+		}
+
+		function startcounter()
+		{
+			a=parseInt(document.getElementById("start").value);
+			c=setInterval(starts,1000)
+		}
+	</script>
+</body>
+</html>
