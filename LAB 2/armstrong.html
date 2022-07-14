@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Armstrong</title>
+</head>
+<body>
+	<script type="text/javascript">
+		n = parseInt(prompt("Enter a number : "));
+			digit = 0;
+			z = n;
+			temp = z;
+			armstrong_no = 0;
+			while(n>=1)
+			{
+				a = n%10;
+				n = parseInt(n/10);
+				digit++;
+			}
+			while(z>=1)
+			{
+				b = z%10;
+				armstrong_no = armstrong_no + Math.pow(b,digit);
+				z = parseInt(z/10); 
+			}
+			if (armstrong_no==temp)
+			{
+				document.write("Number is an Armstrong number");
+			}
+			else
+			{
+				document.write("Number is not an Armstrong number")
+			}
+	</script>
+</body>
+</html>

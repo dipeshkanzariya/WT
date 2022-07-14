@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prime between two numbers</title>
+</head>
+<body>
+	<script type="text/javascript">
+		n1=parseInt(prompt("Enter first number : "));
+		n2=parseInt(prompt("Enter second number : "));
+		
+		for(i=n1;i<=n2;i++)
+		{
+			flag=0;
+			for(k=2;k<=i/2;k++)
+			{
+				if(i%k==0)
+				{
+					flag=1;
+					break;
+				}
+			}
+			if(flag==0)
+			{
+				document.write(i +"<br/>" );
+			}
+			
+		}
+	</script>
+</body>
+</html>
