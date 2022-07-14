@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="present.css">
+	<title>PRESENT</title>
+</head>
+<body>
+	<button class="btn1" onclick="checkAll()">Check All</button>
+	<button class="btn2" onclick="uncheckAll()">Uncheck All</button>
+	<div id="pres"></div>
+	<br>
+	<br>
+	<br>
+
+	<script type="text/javascript">
+		function createElement(start,end)
+		{
+			for(i=start;i<=end;i++)
+			{
+				document.write("<input type='checkbox' onclick='check()'>");
+				document.write("<span>"+i+"</span></br>")
+			}
+		}
+		document.write("------ CLASS A ------"+"<br>"+"<br>");
+		createElement(101,165);
+		document.write("<br>");
+		document.write("------ CLASS B ------"+"<br>"+"<br>");
+		createElement(201,285);
+		document.write("<br>");
+		document.write("------ CLASS C ------"+"<br>"+"<br>");
+		createElement(301,363);
+
+		function checkAll()
+		{
+			temp=document.getElementsByTagName("input");
+			for(i=0;i<temp.length;i++)
+			{
+				temp[i].checked=true;
+			}
+			document.getElementById("pres").innerHTML="";
+		}
+
+		function uncheckAll()
+		{
+			temp=document.getElementsByTagName("input")
+			for(i=0;i<temp.length;i++)
+			{
+				temp[i].checked=false;
+			}
+			document.getElementById("pres").innerHTML="";
+		}
+
+		function check()
+		{
+
+			temp=document.getElementsByTagName("input");
+			temp1=document.getElementById("pres");
+			temp2=document.getElementsByTagName("span");
+			strA="";
+			strB="";
+			strC="";
+			for(i=0;i<temp.length;i++)
+			{
+				if(temp[i].checked==false)
+				{
+					if(temp2[i].innerHTML>=101 && temp2[i].innerHTML<166)
+						strA+=temp2[i].innerHTML+", ";
+					else if(temp2[i].innerHTML>=201 && temp2[i].innerHTML<286)
+						strB+=temp2[i].innerHTML+", ";
+					else
+						strC+=temp2[i].innerHTML+", ";
+				}
+			}
+			strA=strA.substring(0,strA.length-2);
+			strB=strB.substring(0,strB.length-2);
+			strC=strC.substring(0,strC.length-2);
+			temp1.innerHTML="------ CLASS A ------ <br><br>"+strA+
+							"<br><br>------ CLASS B ------<br><br>"+strB+
+							"<br><br>------ CLASS C ------<br><br>"+strC;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.btn1{
+	background-color: lightgreen;
+}
+.btn2{
+	background-color: orangered;
+}
+div{
+	border: 2px solid black ;
+	margin-left: 500px;
+	margin-top: 100px;
+	height: 60vh;
+	width: 100vh;
+	position: fixed;
+	background-color: whitesmoke;
+	color: red;
+	font-size: 20px;
+	box-shadow: 20px 20px 20px 0px gray;
+}
