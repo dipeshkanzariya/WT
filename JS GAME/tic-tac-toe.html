@@ -7,17 +7,21 @@
 </head>
 <body>
 	<center>
-		<table border="">
+		<table>
 			<tr>
-				<td colspan="3">
+				<td colspan="3" style="background-color: whitesmoke;
+				 						color: blue; 
+				 						font-size: 20px; 
+				 						border-radius: 20px;
+				 						box-shadow: 0px 0px 4px 3px;">
 					<h1>Tic - Tac - Toe</h1>
 				</td>
 			</tr>
 			<tr>
-				<td colspan="3">Player 1 : X</td>
+				<td colspan="3" class="player"><b>Player 1 : X</b></td>
 			</tr>
 			<tr>
-				<td colspan="3">Player 2 : O</td>
+				<td colspan="3" class="player"><b>Player 2 : O</b></td>
 			</tr>
 			<tr>
 				<td><input class="inp" id="b1" type="text" name="" onclick="func1(); tic()" readonly></td>
@@ -36,7 +40,7 @@
 			</tr>
 			<tr>
 				<td colspan="3">
-					<button class="btn1" onclick="resetGame()">RESET GAME</button>
+					<button class="btn1" onclick="resetGame()"><b>RESET GAME</b></button>
 				</td>
 			</tr>
 			<tr>
