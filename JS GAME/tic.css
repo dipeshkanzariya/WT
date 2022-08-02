@@ -1,0 +1,13 @@
+table{
+	text-align: center;
+}
+.inp{
+	height: 8vh;
+	width: 10vh;
+	margin: 10px;
+	text-align: center;
+	font-size: 25px;
+}
+.btn1{
+	margin: 10px;
+}
