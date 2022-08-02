@@ -295,7 +295,7 @@ function func3() {
     }
 }
 
-function func4 {
+function func4() {
     if (flag == 1) {
         document.getElementById("b4").value = "X";
         document.getElementById("b4").disabled = true;
@@ -334,7 +334,7 @@ function func6() {
     }
 }
 
-function func7 {
+function func7() {
     if (flag == 1) {
         document.getElementById("b7").value = "X";
         document.getElementById("b7").disabled = true;
@@ -347,7 +347,7 @@ function func7 {
     }
 }
 
-function func8 {
+function func8() {
     if (flag == 1) {
         document.getElementById("b8").value = "X";
         document.getElementById("b8").disabled = true;
@@ -360,7 +360,7 @@ function func8 {
     }
 }
 
-function func9 {
+function func9() {
     if (flag == 1) {
         document.getElementById("b9").value = "X";
         document.getElementById("b9").disabled = true;
